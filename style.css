@@ -1,0 +1,320 @@
+:root {
+    --rosa-escuro: #8f315d;
+    --rosa: #d94f87;
+    --rosa-claro: #ff8fbd;
+    --rosa-pastel: #ffd6e7;
+
+    --fundo: #1e1018;
+    --principal: #301522;
+    --secundaria: #492039;
+
+    --texto: #fff0f6;
+    --texto-secundario: #e9bfd1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(circle at top, #4b1833, transparent 45%),
+        linear-gradient(135deg, #160b12, #2b101e);
+
+    color: var(--texto);
+
+    font-family: Arial, sans-serif;
+}
+
+.caixa-principal {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background-color: var(--principal);
+
+    border: 2px solid var(--rosa-escuro);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(217, 79, 135, 0.12);
+}
+
+.icone {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: var(--rosa-claro);
+
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    color: var(--texto-secundario);
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+
+/* BARRA DE PROGRESSO */
+
+.progresso {
+    width: 100%;
+    height: 10px;
+
+    background-color: #190c13;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 10px;
+}
+
+.barra-progresso {
+    width: 0%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        var(--rosa-escuro),
+        var(--rosa-claro)
+    );
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+.contador {
+    color: var(--texto-secundario);
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* PERGUNTAS */
+
+.caixa-perguntas {
+    color: var(--rosa-pastel);
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+
+/* ALTERNATIVAS */
+
+.caixa-alternativas {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.caixa-alternativas button {
+    width: 100%;
+
+    padding: 17px;
+
+    background-color: var(--secundaria);
+
+    color: var(--texto);
+
+    border: 2px solid transparent;
+
+    border-radius: 13px;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.caixa-alternativas button:hover {
+    background-color: var(--rosa-escuro);
+
+    border-color: var(--rosa-claro);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(217, 79, 135, 0.25);
+}
+
+.caixa-alternativas button:active {
+    transform: scale(0.98);
+}
+
+
+/* RESULTADO */
+
+.caixa-resultado {
+    display: none;
+
+    margin-top: 15px;
+}
+
+.resultado-icone {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+.caixa-resultado h2 {
+    color: var(--rosa-claro);
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.genero-resultado {
+    color: var(--rosa-pastel);
+
+    font-size: 25px;
+
+    margin-bottom: 18px;
+}
+
+.texto-resultado {
+    color: var(--texto-secundario);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* PONTUAÇÕES */
+
+.pontuacoes {
+    background-color: #21101a;
+
+    border: 1px solid var(--rosa-escuro);
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    margin-bottom: 25px;
+}
+
+.pontuacoes p {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 8px 5px;
+
+    color: var(--texto);
+
+    border-bottom: 1px solid #4c2538;
+}
+
+.pontuacoes p:last-child {
+    border-bottom: none;
+}
+
+.pontuacoes span {
+    color: var(--rosa-claro);
+
+    font-weight: bold;
+}
+
+
+/* BOTÃO REINICIAR */
+
+.botao-reiniciar {
+    background-color: var(--rosa);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 15px 25px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.botao-reiniciar:hover {
+    background-color: var(--rosa-claro);
+
+    color: var(--fundo);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 5px 20px rgba(255, 143, 189, 0.3);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .caixa-principal {
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .caixa-perguntas {
+        font-size: 19px;
+    }
+
+    .caixa-alternativas button {
+        font-size: 15px;
+    }
+
+}
